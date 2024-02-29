@@ -1,10 +1,11 @@
 <script setup>
 import { useEventStore } from "@/stores/CallStore";
-import Card from "./../components/card.vue";
+import Card from "./../components/Card.vue";
 
 const store = useEventStore();
 store.getEvents();
 console.log(store.getEvents());
+
 </script>
 
 <template>
@@ -21,26 +22,6 @@ console.log(store.getEvents());
 		</main>
 	</body>
 </template>
-
-<!-- 
-<body>
-  <HeaderVue />
-  <main>
-    <section>
-      <div>
-        <CardFilter />
-
-        <div id="cards_container">
-          <div v-for="event in store.events">
-            <Card :event="event" />
-          </div>
-        </div>
-
-      </div>
-    </section>
-  </main>
-  <FooterVue />
-</body> -->
 
 <style scoped lang="scss">
 section {
